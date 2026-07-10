@@ -1,100 +1,93 @@
-/*!
-    Title: Dev Portfolio Template
-    Version: 1.2.2
-    Last Change: 03/25/2020
-    Author: Ryan Fitzgerald
-    Repo: https://github.com/RyanFitzgerald/devportfolio-template
-    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
+// ===== Mobile Menu Toggle =====
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
 
-    Description: This file contains all the scripts associated with the single-page
-    portfolio website.
-*/
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    const icon = navToggle.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-xmark');
+});
 
-(function($) {
+// Close menu when clicking a link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-xmark');
+    });
+});
 
-    // Show current year
-    $("#current-year").text(new Date().getFullYear());
+// ===== Back to Top Button =====
+const backToTop = document.getElementById('back-to-top');
 
-    // Remove no-js class
-    $('html').removeClass('no-js');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+        backToTop.classList.add('visible');
+    } else {
+        backToTop.classList.remove('visible');
+    }
+});
 
-    // Animate to section when nav is clicked
-    $('header a').click(function(e) {
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
-        // Treat as normal link if no-scroll class
-        if ($(this).hasClass('no-scroll')) return;
+// ===== Scroll Animations =====
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
 
-        e.preventDefault();
-        var heading = $(this).attr('href');
-        var scrollDistance = $(heading).offset().top;
-
-        $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
-        }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
-
-        // Hide the menu once clicked if mobile
-        if ($('header').hasClass('active')) {
-            $('header, body').removeClass('active');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
         }
     });
+}, observerOptions);
 
-    // Scroll to top
-    $('#to-top').click(function() {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
+// Observe elements for animation
+document.querySelectorAll(
+    '.timeline-item, .education-card, .project-card, .skill-category, .stat-card, .highlight-post, .publication-banner'
+).forEach(el => {
+    el.classList.add('fade-in');
+    observer.observe(el);
+});
+
+// ===== Dynamic Year =====
+document.getElementById('current-year').textContent = new Date().getFullYear();
+
+// ===== Horizontal Scroll with Mouse Wheel =====
+document.querySelectorAll('.projects-grid, .trips-slider').forEach(slider => {
+    slider.addEventListener('wheel', (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+            e.preventDefault();
+            slider.scrollBy({ left: e.deltaY * 2, behavior: 'smooth' });
+        }
+    }, { passive: false });
+});
+
+// ===== Slider Arrow Buttons =====
+document.querySelectorAll('.slider-arrow').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const target = btn.closest('.slider-wrapper').querySelector('.projects-grid, .trips-slider');
+        const scrollAmount = 360;
+        if (btn.classList.contains('slider-arrow--left')) {
+            target.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        } else {
+            target.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
     });
+});
 
-    // Scroll to first element
-    $('#lead-down span').click(function() {
-        var scrollDistance = $('#lead').next().offset().top;
-        $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
-        }, 500);
-    });
-
-    // Create timeline
-    $('#experience-timeline').each(function() {
-
-        $this = $(this); // Store reference to this
-        $userContent = $this.children('div'); // user content
-
-        // Create each timeline block
-        $userContent.each(function() {
-            $(this).addClass('vtimeline-content').wrap('<div class="vtimeline-point"><div class="vtimeline-block"></div></div>');
-        });
-
-        // Add icons to each block
-        $this.find('.vtimeline-point').each(function() {
-            $(this).prepend('<div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>');
-        });
-
-        // Add dates to the timeline if exists
-        $this.find('.vtimeline-content').each(function() {
-            var date = $(this).data('date');
-            if (date) { // Prepend if exists
-                $(this).parent().prepend('<span class="vtimeline-date">'+date+'</span>');
-            }
-        });
-
-    });
-
-    // Open mobile menu
-    $('#mobile-menu-open').click(function() {
-        $('header, body').addClass('active');
-    });
-
-    // Close mobile menu
-    $('#mobile-menu-close').click(function() {
-        $('header, body').removeClass('active');
-    });
-
-    // Load additional projects
-    $('#view-more-projects').click(function(e){
-        e.preventDefault();
-        $(this).fadeOut(300, function() {
-            $('#more-projects').fadeIn(300);
-        });
-    });
-
-})(jQuery);
+// ===== Navbar scroll effect =====
+window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+        navbar.style.borderBottomColor = 'var(--border)';
+    } else {
+        navbar.style.borderBottomColor = 'transparent';
+    }
+});

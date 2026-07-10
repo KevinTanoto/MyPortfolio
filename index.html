@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Kevin Tanoto | Data Scientist / ML Engineer</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">KT</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#trips" class="nav-link">Highlights</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </div>
         <ul id="menu" class="shadow">
             <li>
@@ -53,304 +60,424 @@
             <h2>Student At Binus University</h2>
             <a href="https://drive.google.com/file/d/1i6NpLLlqg9E7D8yxzlhOtB36GQ7XUATB/view?usp=sharing" class="btn-rounded-white">Download Resume</a>
         </div>
-        <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
+        <div class="scroll-indicator">
+            <span></span>
         </div>
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
+    </section>
 
-    <div id="about">
+    <!-- About Section -->
+    <section id="about">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-                </div>
-                <div class="col-md-8">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
                     <p>
-                        <!-- , and I use tools like Tableau to create interactive dashboards. -->
-                        An inspired data scientist and data enthusiast with experience in analyzing data sets and delivering insights to drive business decisions. My expertise includes data visualization, statistical analysis, and machine learning. My project is mainly related to industries such as finance and e-commerce. 
-                        I am proficient in programming languages such as Python and R.
-                        Check out my portfolio for examples of my work, including data visualizations, predictive models, and data-driven recommendations. If you're interested in working with me, please don't hesitate to contact me.
+                        Data Scientist / Machine Learning Engineer with 2+ years building production fraud detection and anti-money laundering systems for 30+ bank clients — spanning anomaly detection, time-series forecasting, graph-based investigation, and agentic AI alert triage.
+                    </p>
+                    <p>
+                        Sole ML owner across two divisions, from model development through client onboarding and deployment support. Now targeting AI Engineer roles building applied, production-grade agentic and LLM systems.
                     </p>
                 </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Bank Clients</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">2+</span>
+                        <span class="stat-label">Years ML</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- End #about -->
+    </section>
 
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
-        <div id="experience-timeline">
-            <div data-date="October 2016 – April 2017">
-                <h3>Private Tutoring</h3>
-                <h4>Kosambi, West Jakarta</h4>  
-                <p>
-                    Working for a private tutoring which involves direct communication with a few of people range from grade school to high school. Teach physics and mathematics at a beginner level.
-                </p>             
-            </div>
-
-            <div data-date="October 2019 – April 2023">
-                <h3>Volunteer</h3>
-                <h4>HIMMAT, Himpunan Mahasiswa Matematika (Event Coordinator)</h4>  
-                <p>
-                    Delegate the drafting and negotiation of contracts and equipment rental with other professional that involve in various events. Facilitated the event organizing team.
-                </p>             
-            </div>
-            <div data-date="August 2023 – February 2024">
-                <h3>Data Analyst Intern</h3>
-                <h4>PT. Pharos Indonesia</h4>  
-                <p>
-                    Interning as a data analyst at Pharos Indonesia, a pharmaceutical company, provided an enriching immersion into the intricate world of drug and medicine sales data analysis.I learned to navigate complex databases and employ advanced analytical tools to extract meaningful information.
-                </p>             
-            </div>
-
-        </div>
-    </div>
-    <!-- End #experience -->
-
-    <div id="education">
-        <h2 class="heading">Education</h2>
-        <div class="education-block">
-            <h3>IPEKA Puri Indonesia</h3>
-            <span class="education-date">Aug 2013 - Aug 2016</span>
-            <h4>Highschool</h4>
-        </div>
-        <!-- End .education-block -->
-
-        <div class="education-block">
-            <h3>Tarumanegara University</h3>
-            <span class="education-date">Aug 2016 - Aug 2019</span>
-            <h4>Bachelor of Design in Architecture</h4>
-        </div>
-
-        <div class="education-block">
-            <h3>Binus University</h3>
-            <span class="education-date">Aug 2019 - Aug 2024</span>
-            <h4>Bachelor of Science in Computer Science and Mathematics</h4>
-        </div>
-        <!-- End .education-block -->
-    </div>
-    <!-- End #education -->
-
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
+    <!-- Experience Section -->
+    <section id="experience">
         <div class="container">
-            <div class="row">
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images\LSTM vs SARIMA.png" style="object-fit: fill;width: 300px;height: 400px; padding: 20px;"/>
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jul 2024 – Present</div>
+                    <div class="timeline-content">
+                        <h3>Data Scientist / Machine Learning Engineer</h3>
+                        <h4>Asta Protek Jiarsi (Fortress Digital Services, PT. Sarana Pactindo)</h4>
+                        <p>Sole ML engineer across Fraud Detection and Anti-Money Laundering divisions, owning the full model lifecycle — development, testing, client onboarding, deployment support, and maintenance — for 36 bank clients.</p>
+                        <ul class="timeline-list">
+                            <li>Anomaly detection engine (Isolation Forest + EWMA drift adaptation) processing 200K–800K transactions/day across 25 clients.</li>
+                            <li>Real-time fraud prevention streaming algorithm — sub-200ms scoring at 133 TPS via Kafka/Flink.</li>
+                            <li>Agentic AI alert-triage system (LangGraph + AWS Bedrock) achieving 93% agreement with analyst decisions.</li>
+                            <li>Prophet-based time-series anomaly monitoring with agentic investigation pipeline and real-time WhatsApp alerting.</li>
+                            <li>Graph-based AML detection tracing multi-hop money-movement chains across ~11K employees and ~90K daily transactions.</li>
+                            <li>Centralized Grafana/Prometheus observability stack across 36 on-prem and cloud environments.</li>
+                        </ul>
                     </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>A Comparison of Seasonal ARIMA and LSTM in Forecasting Demand Time Series</h3>
-                        <p>
-                            This project aims to investigate which forecasting methods produce a better result for predicting time series based on fewer forecast error. 
-                            This is done because not many papers cover the prediction performance between traditional model and machine learning model. 
-                            The prediction model uses statistical models such as ARIMA and machine learning models such as LSTM
-                        </p>
-                        <div style="display: flex; flex-wrap: nowrap;justify-content: center;gap: 10px;">
-                            <div> 
-                                <a href="https://drive.google.com/file/d/1gdjmB06Eoxg0AZvZxFr9K-oVQKqssTJO/view?usp=sharing">View Paper</a> 
-                            </div>
-                            <div>
-                                <a href="https://github.com/KevinTanoto/seasonal_arima_vs_lstm_demand_forecasting">View Code</a>
-                            </div>
-                        </div>
-                        <!-- <a href="https://github.com/KevinTanoto/seasonal_arima_vs_lstm_demand_forecasting">View Project</a> -->
-                    </div>
-                    <!-- End .project-info -->
                 </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images\NaivePortfolio.png" style="object-fit: fill;width: 300px;height: 300px; padding: 20px;"/>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Aug 2023 – Jul 2024</div>
+                    <div class="timeline-content">
+                        <h3>Data Analyst (Internship → Contract)</h3>
+                        <h4>PT. Pharos Indonesia</h4>
+                        <p>Identified pharmaceutical products with high market-growth potential using scraped pricing and sales data. Analyzed market-share across online and offline channels to guide product strategy. Built an advertising efficiency evaluation system to help optimize ad spend.</p>
                     </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Sentiment Analysis with Naive Bayes Classifier</h3>
-                        <p>
-                            This project develop a sentiment analysis system using a Naive Bayes classifier. 
-                            The system takes textual input and determines whether the sentiment expressed is negative, positive, or neutral. 
-                            But it doesn't stop there. The system goes beyond sentiment analysis and offers additional insights.
-                        </p>
-                        <div style="display: flex; flex-wrap: nowrap;justify-content: center;gap: 10px;">
-                            <div> 
-                                <a href="https://github.com/KevinTanoto/NaiveBayesClassifier_SentimentAnalysis">View Code</a> 
-                            </div>
-                            <div>
-                                <a href="https://kevintanoto-naivebayesclassifier-sentimentanal-streamlit-y4q299.streamlit.app/">View Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End .project-info -->
                 </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images\Cloud BRroker ERD.png" style="object-fit: fill;width: 300px;height: 250px; padding: 20px;"/>
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Cloud Broker - SQL Project</h3>
-                        <p>
-                            Cloud Broker is a project that provides a platform for customers to purchase and manage their own servers and databases, which can then be hosted on their preferred cloud provider. 
-                            The project utilizes MySQL to handle the data management and transactions involved in the process.
-                        </p>
-                        <a href="https://github.com/KevinTanoto/cloud_broker_SQL_project">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images\Comparing model metrics for employeee burnout rate.png" style="object-fit: fill;width: 300px;height: 250px;"/>
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Comparing Model Metrics for Best Accuracy on Employee Burnout Rate Dataset</h3>
-                        <p>
-                            This project aims to explore and compare the performance of various machine learning models in predicting employee burnout rates based on certain factors. 
-                            The dataset used in this project consists of various factors such as age, gender, work experience, and other variables that are believed to be related to employee burnout.
-                        </p>
-                        <a href="https://github.com/KevinTanoto/machine_learning_linear_regression">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
             </div>
-
-            <div class="project shadow-large">
-                <div class="project-image">
-                    <img src="images\game_review_android.png" style="object-fit: fill;width: 300px;height: 400px; padding: 10px;"/>
-                </div>
-                <!-- End .project-image -->
-                <div class="project-info">
-                    <h3>Game Review with Android Studio</h3>
-                    <p>
-                        "Game Review" is a mobile application that provides a platform for gamers to share their thoughts 
-                        and opinions about their favorite video 
-                        games. The app allows users to browse a database of games and read reviews from other gamers
-                    </p>
-                    <div style="display: flex; flex-wrap: nowrap;justify-content: center;gap: 10px;">
-                        <div> 
-                            <a href="https://github.com/KevinTanoto/game_review_android_studio">View Code</a> 
-                        </div>
-                        <div>
-                            <a href="https://drive.google.com/file/d/1STyH763euhXXXGEr6bzhyfu1dAhrfZQ9/view?usp=sharing">Download APK</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End .project-info -->
-            </div>
-
-            <div class="project shadow-large">
-                <div class="project-image">
-                    <img src="images\airlinetrain_portfol.png" style="object-fit: fill;width: 300px;height: 200px; padding: 10px;"/>
-                </div>
-                <!-- End .project-image -->
-                <div class="project-info">
-                    <h3>Airline Train Service website with Laravel</h3>
-                    <p>
-                        "Airline Train Service" is a train service website developed using Laravel, a PHP framework. 
-                        Our website offers a comprehensive and seamless experience for users seeking efficient and reliable train travel.
-                    </p>
-                    <a href="https://github.com/KevinTanotoChen/AirlineTrainServices">View Project</a>
-                </div>
-                <!-- End .project-info -->
-            </div>
-
-            <div class="project shadow-large">
-                <div class="project-image">
-                    <img src="images\tic-tac-toe.png" style="object-fit: fill;width: 300px;height: 250px;"/>
-                </div>
-                <!-- End .project-image -->
-                <div class="project-info">
-                    <h3>Tic Tac Toe with python</h3>
-                    <p>
-                        This Tic Tac Toe game is implemented in Python with a Command Line Interface. 
-                        It allows two players to take turns placing X's and O's on a 3x3 board until one player gets three in a row or the board is filled and the game ends in a draw.
-                    </p>
-                    <a href="https://github.com/KevinTanoto/Python_tic_tic_toe_game">View Project</a>
-                </div>
-                <!-- End .project-info -->
-            </div>
-            <!-- End .project -->
-
         </div>
-    </div>
-    <!-- End #projects -->
+    </section>
 
-    <div id="skills">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>PHP</li>
-            <li>Python</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>R</li>
-            <li>Machine Learning</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SQL</li>
-        </ul>
-    </div>
-    <!-- End #skills -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/f/xbjebdnw">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid education-grid--2col">
+                <div class="education-card">
+                    <div class="education-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>BINUS University</h3>
+                    <span class="education-period">Aug 2019 – Mar 2024</span>
+                    <h4>B.S., Computer Science and Mathematics</h4>
+                    <p class="education-gpa">GPA: 3.46</p>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <h3>Tarumanegara University</h3>
+                    <span class="education-period">Aug 2016 – Aug 2019</span>
+                    <h4>Bachelor of Design in Architecture</h4>
+                </div>
+            </div>
+            <!-- Publication -->
+            <div class="publication-banner">
+                <i class="fa-solid fa-book-open"></i>
+                <div class="publication-banner-text">
+                    <h4>Published Paper</h4>
+                    <p>Investigation of Challenges in Aspect-Based Sentiment Analysis Enhanced Using Softmax Function on Twitter During the 2024 Indonesian Presidential Election</p>
+                    <span class="publication-journal">ScienceDirect – Procedia Computer Science</span>
+                </div>
+                <a href="https://www.sciencedirect.com/science/article/pii/S1877050924031351" target="_blank" class="btn btn-outline btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read</a>
+            </div>
         </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="slider-wrapper">
+                <button class="slider-arrow slider-arrow--left" data-target=".projects-grid" aria-label="Scroll left"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-image project-image--icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Behavior – Anomaly Detection Engine</h3>
+                        <p>Isolation Forest anomaly-detection on RFM-derived behavioral features with EWMA-based drift adaptation, processing 200K–800K transactions/day across 25 bank clients in near-real-time batch architecture.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Isolation Forest</span>
+                            <span>EWMA</span>
+                            <span>Batch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image project-image--icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Real-Time Fraud Prevention</h3>
+                        <p>Streaming anomaly-detection algorithm using random sparse projections with online histogram density estimation and EWMA-based adaptive thresholds — sub-200ms scoring at 133 TPS via Kafka/Flink.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Kafka</span>
+                            <span>Flink</span>
+                            <span>Streaming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image project-image--icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Agentic AI Alert Triage</h3>
+                        <p>Agentic AI system (LangGraph + AWS Bedrock) that investigates and explains flagged alerts to cut false-positive noise and analyst fatigue, reaching 93% agreement with analyst decisions across 25 clients.</p>
+                        <div class="project-tags">
+                            <span>LangGraph</span>
+                            <span>AWS Bedrock</span>
+                            <span>Agentic AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image project-image--icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Wide – Time-Series Anomaly System</h3>
+                        <p>Prophet-based time-series anomaly monitoring on transaction volume/frequency windows (200K–800K txn/day, 6 clients), paired with an agentic investigation pipeline and real-time WhatsApp alerting.</p>
+                        <div class="project-tags">
+                            <span>Prophet</span>
+                            <span>LangGraph</span>
+                            <span>Time Series</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image project-image--icon">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>AML – Graph-Based Detection</h3>
+                        <p>Graph-based detection system tracing multi-hop money-movement chains (up to 3 hops/day) across ~11K employees and ~90K daily transactions for suspicious transaction reporting.</p>
+                        <div class="project-tags">
+                            <span>Neo4j</span>
+                            <span>Graph Analysis</span>
+                            <span>AML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/LSTM vs SARIMA.png" alt="LSTM vs SARIMA comparison chart">
+                    </div>
+                    <div class="project-info">
+                        <h3>ARIMA vs LSTM Demand Forecasting</h3>
+                        <p>Investigating which forecasting methods produce better results for predicting time series with fewer forecast errors, comparing traditional ARIMA with deep learning LSTM.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Time Series</span>
+                            <span>LSTM</span>
+                            <span>ARIMA</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://drive.google.com/file/d/1gdjmB06Eoxg0AZvZxFr9K-oVQKqssTJO/view?usp=sharing" target="_blank"><i class="fa-solid fa-file-lines"></i> Paper</a>
+                            <a href="https://github.com/KevinTanoto/seasonal_arima_vs_lstm_demand_forecasting" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/airlinetrain_portfol.png" alt="Airline Train Service website">
+                    </div>
+                    <div class="project-info">
+                        <h3>Airline Train Service – Laravel</h3>
+                        <p>A train service website offering a comprehensive and seamless experience for users seeking efficient and reliable train travel booking.</p>
+                        <div class="project-tags">
+                            <span>PHP</span>
+                            <span>Laravel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/KevinTanotoChen/AirlineTrainServices" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                <button class="slider-arrow slider-arrow--right" data-target=".projects-grid" aria-label="Scroll right"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section id="trips">
+        <div class="container">
+            <h2 class="section-title">Highlights</h2>
+            <div class="slider-wrapper">
+                <button class="slider-arrow slider-arrow--left" data-target=".trips-slider" aria-label="Scroll left"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="trips-slider">
+
+                <div class="highlight-post">
+                    <div class="post-header">
+                        <span class="post-date"><i class="fa-solid fa-calendar"></i> May 2026</span>
+                        <span class="post-location"><i class="fa-solid fa-location-dot"></i> Shanghai, China</span>
+                    </div>
+                    <div class="post-gallery">
+                        <img src="images/20260520_111552.jpg" alt="Huawei Intelligent Finance Summit 2026 photo 1">
+                        <img src="images/20260521_122432.jpg" alt="Huawei Intelligent Finance Summit 2026 photo 2">
+                    </div>
+                    <div class="post-body">
+                        <h3>Huawei Intelligent Finance Summit (HiFS) 2026</h3>
+                        <p>Attended the Huawei Intelligent Finance Summit in Shanghai, where Huawei unveiled upgraded solutions to drive finance toward agentic banking — accelerating the migration of financial institutions toward fully autonomous agentic banking systems.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-post">
+                    <div class="post-header">
+                        <span class="post-date"><i class="fa-solid fa-calendar"></i> Jan 2026</span>
+                        <span class="post-location"><i class="fa-solid fa-location-dot"></i> Philippines</span>
+                    </div>
+                    <div class="post-gallery">
+                        <img src="images/20260126_083943(1).jpg" alt="Philippines on-site engagement photo 1">
+                        <img src="images/IMG-20260113-WA0007.jpg" alt="Philippines on-site engagement photo 2">
+                    </div>
+                    <div class="post-body">
+                        <h3>Insurance Client On-Site Engagement</h3>
+                        <p>Selected for a 24-day on-site engagement in the Philippines diagnosing an insurance client's customer-onboarding backlog — uncovering bottlenecks from legacy systems, failed OCR, and manual processes. Findings led to a follow-on core-insurance systems engagement.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-post">
+                    <div class="post-header">
+                        <span class="post-date"><i class="fa-solid fa-calendar"></i> 2025</span>
+                        <span class="post-location"><i class="fa-solid fa-location-dot"></i> Jakarta, Indonesia</span>
+                    </div>
+                    <div class="post-gallery post-gallery--single">
+                        <img src="images/Screenshot_20260710_232238_Instagram.jpg" alt="AWS AI League competition photo">
+                    </div>
+                    <div class="post-body">
+                        <h3>AWS AI League – AWS Summit</h3>
+                        <p>Participated in the AWS AI League at AWS Summit Jakarta, a competition combining hands-on learning with AWS AI services (SageMaker AI & Amazon Bedrock). Competed against 30+ companies to build an AI solution for tourism and ranked in the top 10.</p>
+                    </div>
+                </div>
+
+                </div>
+                <button class="slider-arrow slider-arrow--right" data-target=".trips-slider" aria-label="Scroll right"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-code"></i> Languages</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>Java</span>
+                        <span>PHP</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-brain"></i> ML / Data Science</h3>
+                    <div class="skill-tags">
+                        <span>XGBoost</span>
+                        <span>Isolation Forest</span>
+                        <span>Prophet</span>
+                        <span>EWMA</span>
+                        <span>Autoencoders</span>
+                        <span>LSTM</span>
+                        <span>PyTorch</span>
+                        <span>Pandas</span>
+                        <span>Polars</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-robot"></i> Agentic AI / LLM</h3>
+                    <div class="skill-tags">
+                        <span>LangGraph</span>
+                        <span>AWS Bedrock</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-database"></i> Data Engineering</h3>
+                    <div class="skill-tags">
+                        <span>Apache Kafka</span>
+                        <span>Apache Flink</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-cloud"></i> Cloud / DevOps</h3>
+                    <div class="skill-tags">
+                        <span>AWS (S3, EC2, SageMaker, IAM)</span>
+                        <span>Docker</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-chart-line"></i> Monitoring & Databases</h3>
+                    <div class="skill-tags">
+                        <span>Grafana</span>
+                        <span>Prometheus</span>
+                        <span>PostgreSQL</span>
+                        <span>MySQL</span>
+                        <span>SSMS</span>
+                        <span>Neo4j</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon"><i class="fa-brands fa-aws"></i></div>
+                    <h3>AWS Certified Cloud Practitioner</h3>
+                    <span class="education-period">In Progress</span>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>NVIDIA DLI</h3>
+                    <span class="education-period">Completed</span>
+                    <h4>Fundamentals of Deep Learning</h4>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <h3>IBM – Coursera</h3>
+                    <span class="education-period">Completed</span>
+                    <h4>Python for Data Science, AI & Development</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="contact-description">Interested in working together? Feel free to reach out.</p>
+            <div class="contact-form-wrapper">
+                <form method="POST" action="https://formspree.io/f/xbjebdnw">
+                    <input type="hidden" name="_subject" value="Contact request from personal website">
+                    <div class="form-group">
+                        <input type="email" name="_replyto" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; <span id="current-year">2023</span> Kevin Tanoto
-                    </p>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; <span id="current-year"></span> Kevin Tanoto</p>
                 </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/KevinTanoto" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/kevin-tanoto-b362b0233/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
+                <div class="footer-right">
+                    <a href="https://github.com/KevinTanoto" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kevin-tanoto-b362b0233/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- End footer -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+    <!-- Back to top -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
